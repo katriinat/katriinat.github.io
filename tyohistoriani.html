@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Katriina Tiainen | Työhistoriani</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="myScript.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="Navbar">
+                  <div class="Navbar__Link-brand">
+                    <a href="#" target="_blank">Katriina Tiainen</a>
+                  </div>
+                  <div class="Navbar__Link Navbar__Link-toggle">
+                    <i class="material-icons" style="font-size: 36px">menu</i>
+                  </div>
+                </nav>
+                <nav class="Navbar__Items">
+                  <div class="Navbar__Link">
+                    <a href="#" target="_blank">Etusivu</a>
+                  </div>
+                  <div class="Navbar__Link">
+                    <a href="#" target="_blank">Kuka olen</a>
+                  </div>
+                  <div class="Navbar__Link">
+                    <a href="#" target="_blank">Koulutustaustani</a>
+                  </div>
+                  <div class="Navbar__Link">
+                    <a href="#" target="_blank">Ota yhteyttä</a>
+                  </div>
+                </nav>
+              </div>
+        </div>
+
+        <div class="content">
+            <img src="tyohistoria.svg" alt="">
+            <h1>Työhistoriani</h1>
+            <p class="leadcontent">Minulla on vankka työkokemus kirjasto- ja tietopalvelualalta. Olen työskennellyt viimeiset kymmenen vuotta valtion erikoiskirjastoissa monipuolisissa työtehtävissä.</p>
+            <h2>Tilastokeskus 2017–</h2>
+            <p><b>Tietoasiantuntija</b><br>
+              Työskentelen tällä hetkellä Tilastokeskuksen tietopalvelussa, missä autan asiakkaita löytämään, tulkitsemaan ja käyttämään tilastotietoja. Tehtäviini kuuluu myös mm. verkkosisältöjen tuottamista ja erilaisia kehittämistehtäviä. Tietopalvelutyön lisäksi olen ollut mukana useissa projekteissa, esim. selvittämässä chatbotin ja palvelunhallintajärjestelmän käyttöönottoa.</p>
+            <h2>Saavutettavuuskirjasto Celia 2012–2017</h2>
+            <p><b>Kirjastonhoitaja</b><br>
+              Päätehtäviäni olivat suomenkielisen aikuisten ja ruotsinkielisen lasten- ja nuorten kirjakokoelman kehittäminen sekä sen hankinta ja luettelointi, oppimateriaalin hankinta ja luettelointi, korkeakoulukirjastojen asiakkuusvastaavatyö, palvelusisällöt ja verkkoviestintä niiden suhteen, asiakasneuvonta ja tietopalvelu. Lisäksi olin mukana useissa projekteissa, esim. kehittämässä Celian verkkokauppaa, kehittämässä Celian projektityökaluja sekä edistämässä saavutettavaa julkaisua Suomessa.</p>
+            <h2>Helsingin kaupunki 2012</h2>
+            <p><b>Tietopalvelusihteeri</b><br>
+              Olin harjoittelijana Helsingin kaupungin tietokeskuksella, jossa tehtäviini kuului tietoaineistojen luettelointia ja sisällönkuvailua, kaukopalvelun hoitamista, kokoelman ylläpitoa sekä osallistumista tietopalveluun ja asiakaspalveluun.</p>
+            <h2>Kesätöitä 2001–2011</h2>
+              Ennen varsinaisen urani urkenemista tein erilaisia kesätöitä. Olen ollut mm. turistioppaana, siivoamassa hotelleja ja sairaaloita sekä poimimassa mansikoita.</p>
+        </div>
+        
+        <div class="footer">
+            <p>© Katriina Tiainen 2023 | <a href="#" target="_blank">Ota yhteyttä</a></p>
+        </div>
+        <script>
+          function classToggle() {
+              const navs = document.querySelectorAll('.Navbar__Items')
+              
+              navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
+            }
+            
+            document.querySelector('.Navbar__Link-toggle')
+              .addEventListener('click', classToggle);</script>
+    </body>
+</html>

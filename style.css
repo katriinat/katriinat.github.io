@@ -1,0 +1,322 @@
+html, body {
+  background-color: #EEEDE7;
+  color: #282D1D;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Quicksand&display=swap');
+
+/*
+div {
+  border: 1px;
+  border-color: black;
+  border-style: solid;
+}
+*/
+
+/*Navigaatio*/
+.Navbar {
+  display: flex;
+  padding: 16px;
+  width: 85%;
+  margin: auto;
+}
+
+.Navbar__Items {
+  display: flex;
+}
+
+.Navbar__Link {
+  padding-right: 15px;
+}
+
+.Navbar__Items {
+  margin-left: auto;
+}
+
+.Navbar__Link-toggle {
+  display: none;
+}
+
+.Navbar__Link-brand {
+  padding-right: 15px;
+}
+
+/*Yleiset*/
+.content {
+  width: 85%;
+  margin: auto;
+  font-size: 16px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+
+.lead {
+  font-size: 18px;
+  text-align: center;
+
+}
+
+.leadcontent {
+  font-size: 18px;
+  text-align: center;
+}
+
+.content a:link, a:visited {
+  color: #282D1D;
+}
+
+.content a:hover, a:active {
+  color: #777959;;
+}
+
+.content img {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.pienikuva img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  padding-bottom: 35px;
+}
+
+/* Logolinkin muotoilu */
+.Navbar__Link-brand a:link, a:visited {
+  font-size: 25px;
+  font-family: 'Audiowide', cursive;
+  font-weight: bold;
+  text-decoration: none;
+  color: #282D1D;
+  text-transform: uppercase;
+}
+
+.Navbar__Link-brand a:hover, a:active {
+  color: #282D1D;
+}
+
+/* Navilinkkien muotoilu */
+.Navbar__Link a:link, a:visited {
+  text-decoration: none;
+  color: #282D1D;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.Navbar__Link a:hover, a:active {
+  color: #777959;
+}
+
+/* Sticky header */
+.header {
+  background-color: #EEEDE7;
+  position: sticky; 
+  top: 0;
+}
+
+/* Container for flexboxes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Neljä kolumnia */
+.column {
+  flex: 50%;
+}
+
+/* Etusivun linkkilaatikot */
+.fplink a:link, a:visited {
+  background-color: #8F916B;
+  color: #EEEDE7;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%
+}
+
+.fplink a:hover, a:active {
+  background-color: #777959;
+  color: #EEEDE7;
+}
+
+.footer {
+  background-color: #DDB040;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer p {
+  text-align: center; 
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+.footer a:link, a:visited {
+  color: #282D1D;
+  text-decoration: none;
+}
+
+.footer a:hover, a:active {
+  color: #282D1D;
+  text-decoration: underline;
+}
+
+.some ul {
+  list-style-type: none;
+}
+
+/* Somenapit */
+.some i {
+  padding: 20px;
+  font-size: 40px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.some i:hover {
+  color: #777959;
+}
+
+.some a{
+  text-decoration:none;
+  width:100%;
+  height:100%;
+  display:block;
+  margin:0;
+  padding:0;
+}
+
+.some a span{
+  font-size:20px;
+}
+
+/*tabletti*/
+@media only screen and (min-width: 700px) {
+  .content {
+    width: 85%;
+  }
+
+  .Navbar {
+    display: flex;
+    padding: 16px;
+    width: 85%;
+    margin: auto;
+  }
+
+  .column {
+    flex: 50%;
+  }
+
+  .column p {
+    padding-right: 15px;
+    width: 95%;
+  }
+
+  .fplink {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .column img {
+    width: 95%;
+  }
+
+  .column p {
+    padding-top: 15px;
+  }
+
+/* leadin muotoilu */
+  .lead {
+    font-size: 22px;
+    margin-top: 60px;
+  } 
+
+  .leadcontent {
+    font-size: 22px;
+  } 
+
+  h1 {
+    font-size: 36px;
+  }
+}
+
+/*pöytäkone*/
+@media only screen and (min-width: 1025px) {
+  .content {
+    width: 55%;
+  }
+
+  .Navbar {
+    display: flex;
+    padding: 16px;
+    width: 55%;
+    margin: auto;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 699px) {
+  .row {
+    flex-direction: column;
+  }
+  .Navbar__Items,
+  .Navbar {
+    flex-direction: column;
+  }
+    
+  .Navbar__Items {
+    display:none;
+  }
+    
+  .Navbar__Items {
+    margin-left:0;
+  }
+    
+  .Navbar__ToggleShow {
+    display: flex;
+  }
+    
+  .Navbar__Link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+   } 
+
+}

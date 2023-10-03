@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Katriina Tiainen</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+        <div class="header">
+            <div class="Navbar">
+                  <div class="Navbar__Link-brand">
+                    <a href="#" target="_blank">Katriina Tiainen</a>
+                  </div>
+                  <div class="Navbar__Link Navbar__Link-toggle">
+                    <i class="material-icons" style="font-size: 36px">menu</i>
+                  </div>
+                </nav>
+                <nav class="Navbar__Items">
+                  <div class="Navbar__Link">
+                    <a href="#" target="_blank">Kuka olen</a>
+                  </div>
+                  <div class="Navbar__Link">
+                    <a href="#" target="_blank">Työhistoriani</a>
+                  </div>
+                  <div class="Navbar__Link">
+                    <a href="#" target="_blank">Koulutustaustani</a>
+                  </div>
+                  <div class="Navbar__Link">
+                    <a href="#" target="_blank">Ota yhteyttä</a>
+                  </div>
+                </nav>
+              </div>
+        </div>
+
+        <div class="content">
+            <div class="row">
+            <div class="column">
+                <img src="katriinatiainen.jpg" alt="Kuva Katriinasta hymyilemässä">
+            </div>
+
+            <div class="column">
+                <p class="lead">Moi! Olen Katriina, pistämätön tietoalan ammattilainen. Hyppää syvemmälle ja tutustu minuun ja osaamiseeni!</p>
+            </div>
+
+            <div class="column">
+                <div class="fplink">
+                    <a href="#" target="_blank">Kuka olen</a>
+                </div>
+                <p>Olen pirteä ja neuvokas valtion virkahenkilö, joka on onnellisimmillaan lankakerien ympäröimänä. Intohimonani on uuden oppiminen – ja salmiakki.</p>
+            </div>
+
+            <div class="column">
+                <div class="fplink">
+                    <a href="#" target="_blank">Työhistoriani</a>
+                </div>
+                <p>Minulla on vankka työkokemus kirjasto- ja tietopalvelualalta. Olen työskennellyt viimeiset kymmenen vuotta valtion erikoiskirjastoissa monipuolisissa työtehtävissä.</p>
+            </div>
+           
+            <div class="column">
+                <div class="fplink">
+                    <a href="#" target="_blank">Koulutustaustani</a>
+                </div>
+                <p>Olen opiskellut sekä humanistisia että luonnontieteellisiä aloja. Minulla on maisterintutkinnot englantilaisesta filologiasta ja tieto- ja asiakirjahallinnosta, ja tällä hetkellä opiskelen it-tradenomiksi.</p>
+            </div>
+            
+            <div class="column">
+                <div class="fplink">
+                    <a href="#" target="_blank">Ota yhteyttä</a>
+                </div>
+                <p>Haluatko tutustua minuun tarkemmin? Heräsikö mielessäsi jotain kysyttävää? Laita viestiä, niin olen sinuun pian yhteydessä! </p>
+            </div>
+        </div>
+    </div>
+
+        <div class="footer">
+            <p>© Katriina Tiainen 2023 | <a href="#" target="_blank">Ota yhteyttä</a></p>
+        </div>
+    <script>
+    function classToggle() {
+        const navs = document.querySelectorAll('.Navbar__Items')
+        
+        navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
+      }
+      
+      document.querySelector('.Navbar__Link-toggle')
+        .addEventListener('click', classToggle);</script>
+    </body>
+</html>
