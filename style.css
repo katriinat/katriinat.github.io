@@ -17,6 +17,20 @@ div {
 }
 */
 
+body {
+  font-size:calc(16px + 0.390625vw);
+}
+
+
+h1 {
+  font-size: 1.8rem;
+}
+  
+h2 {
+  font-size: 1.5rem;
+}
+
+
 /*Navigaatio*/
 .Navbar {
   display: flex;
@@ -53,14 +67,18 @@ div {
 
 h1 {
   text-transform: uppercase;
+  /*
   font-size: 28px;
+  */
   font-weight: bold;
   text-align: center;
 }
 
 h2 {
   text-transform: uppercase;
+  /*
   font-size: 20px;
+  */
   font-weight: bold;
   margin: 0;
   padding: 0;
@@ -74,13 +92,17 @@ p {
 
 
 .lead {
+  /*
   font-size: 22px;
+  */
   text-align: center;
 
 }
 
 .leadcontent {
+  /*
   font-size: 22px;
+  */
   text-align: center;
 }
 
@@ -100,7 +122,9 @@ p {
 
 /* Logolinkin muotoilu */
 .Navbar__Link-brand a:link {
+  /*
   font-size: 32px;
+  */
   font-family: 'Audiowide', cursive;
   font-weight: bold;
   text-decoration: none;
@@ -109,7 +133,9 @@ p {
 }
 
 .Navbar__Link-brand a:visited {
+  /*
   font-size: 32px;
+  */
   font-family: 'Audiowide', cursive;
   font-weight: bold;
   text-decoration: none;
@@ -129,14 +155,18 @@ p {
 .Navbar__Link a:link {
   text-decoration: none;
   color: #282D1D;
+  /*
   font-size: 20px;
+  */
   text-transform: uppercase;
 }
 
 .Navbar__Link a:visited {
   text-decoration: none;
   color: #282D1D;
+  /*
   font-size: 20px;
+  */
   text-transform: uppercase;
 }
 
@@ -173,7 +203,9 @@ p {
   color: #EEEDE7;
   text-transform: uppercase;
   font-weight: bold;
+  /*
   font-size: 26px;
+  */
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: center;
@@ -187,7 +219,9 @@ p {
   color: #EEEDE7;
   text-transform: uppercase;
   font-weight: bold;
+  /*
   font-size: 26px;
+  */
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: center;
@@ -214,7 +248,9 @@ p {
 
 .footer p {
   text-align: center; 
+  /*
   font-size: 18px;
+  */
   margin-top: 25px;
 }
 
@@ -245,7 +281,9 @@ p {
 /* Somenapit */
 .some i {
   padding: 20px;
+  /*
   font-size: 40px;
+  */
   width: 50px;
   text-align: center;
   text-decoration: none;
@@ -265,7 +303,9 @@ p {
 }
 
 .some a span{
+  /*
   font-size:20px;
+  */
 }
 
 /* Peruslinkit */
@@ -310,7 +350,9 @@ a:active.peruslinkki {
 @media only screen and (min-width: 1171px) {
   .content {
     width: 85%;
+    /*
     font-size: 18px;
+    */
   }
 
   .Navbar {
@@ -343,20 +385,28 @@ a:active.peruslinkki {
 
 /* leadin muotoilu */
   .lead {
+    /*
     font-size: 22px;
+    */
     margin-top: 60px;
   } 
 
   .leadcontent {
+    /*
     font-size: 22px;
+    */
   } 
 
   h1 {
+    /*
     font-size: 36px;
+    */
   }
 
   h2 {
+    /*
     font-size: 20px;
+    */
   }
 }
 
