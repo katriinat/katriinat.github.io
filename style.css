@@ -9,7 +9,7 @@ html, body {
   flex-direction: column;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&amp;family=Quicksand&amp;display=swap');
 
 /*
 div {
@@ -304,6 +304,9 @@ a:active.peruslinkki {
   color: #777959;
 }
 
+.column p {
+  padding-top: 15px;
+}
 
 /*tabletti*/
 @media only screen and (min-width: 1171px) {
@@ -339,9 +342,6 @@ a:active.peruslinkki {
     width: 95%;
   }
 
-  .column p {
-    padding-top: 15px;
-  }
 
 /* leadin muotoilu */
   .lead {
