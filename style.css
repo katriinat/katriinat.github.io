@@ -9,7 +9,7 @@ html, body {
   flex-direction: column;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&amp;family=Quicksand&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 /*
 div {
@@ -376,7 +376,7 @@ a:active.peruslinkki {
   }
 }
 
-/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+/* On screens that are 1170px wide or less, make the columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 1170px) {
   .row {
     flex-direction: column;
