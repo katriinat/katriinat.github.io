@@ -403,4 +403,7 @@ a:active.peruslinkki {
     cursor: pointer;
    } 
 
+   body {
+    -webkit-text-size-adjust: 100%;
+   }
 }
