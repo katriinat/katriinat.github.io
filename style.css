@@ -18,7 +18,7 @@ div {
 */
 
 body {
-  font-size:calc(16px + 0.390625vw);
+  font-size:calc(18px + 0.390625vw);
 }
 
 
@@ -96,6 +96,7 @@ p {
   font-size: 22px;
   */
   text-align: center;
+  font-size: 1.5rem;
 
 }
 
@@ -302,11 +303,11 @@ p {
   padding:0;
 }
 
+/*
 .some a span{
-  /*
   font-size:20px;
-  */
 }
+*/
 
 /* Peruslinkit */
 a:link.peruslinkki {
@@ -391,23 +392,23 @@ a:active.peruslinkki {
     margin-top: 60px;
   } 
 
+/*
   .leadcontent {
-    /*
     font-size: 22px;
-    */
   } 
+*/
 
+/*
   h1 {
-    /*
     font-size: 36px;
-    */
   }
+*/
 
+/*
   h2 {
-    /*
     font-size: 20px;
-    */
   }
+  */
 }
 
 /*pöytäkone*/
