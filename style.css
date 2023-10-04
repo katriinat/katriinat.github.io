@@ -86,14 +86,6 @@ p {
   text-align: center;
 }
 
-.content a:link, a:visited {
-  color: #282D1D;
-}
-
-.content a:hover, a:active {
-  color: #777959;;
-}
-
 .content img {
   width: 100%;
   padding-top: 15px;
@@ -109,7 +101,7 @@ p {
 }
 
 /* Logolinkin muotoilu */
-.Navbar__Link-brand a:link, a:visited {
+.Navbar__Link-brand a:link {
   font-size: 25px;
   font-family: 'Audiowide', cursive;
   font-weight: bold;
@@ -118,19 +110,43 @@ p {
   text-transform: uppercase;
 }
 
-.Navbar__Link-brand a:hover, a:active {
+.Navbar__Link-brand a:visited {
+  font-size: 25px;
+  font-family: 'Audiowide', cursive;
+  font-weight: bold;
+  text-decoration: none;
+  color: #282D1D;
+  text-transform: uppercase;
+}
+
+.Navbar__Link-brand a:hover {
+  color: #282D1D;
+}
+
+.Navbar__Link-brand a:active {
   color: #282D1D;
 }
 
 /* Navilinkkien muotoilu */
-.Navbar__Link a:link, a:visited {
+.Navbar__Link a:link {
   text-decoration: none;
   color: #282D1D;
   font-size: 18px;
   text-transform: uppercase;
 }
 
-.Navbar__Link a:hover, a:active {
+.Navbar__Link a:visited {
+  text-decoration: none;
+  color: #282D1D;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.Navbar__Link a:hover {
+  color: #777959;
+}
+
+.Navbar__Link a:active {
   color: #777959;
 }
 
@@ -152,8 +168,9 @@ p {
   flex: 50%;
 }
 
-/* Etusivun linkkilaatikot */
-.fplink a:link, a:visited {
+/* Etusivun linkkilaatikot  */
+
+.fplink a:link {
   background-color: #8F916B;
   color: #EEEDE7;
   text-transform: uppercase;
@@ -164,10 +181,29 @@ p {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  width: 100%
+  width: 100%;
 }
 
-.fplink a:hover, a:active {
+.fplink a:visited {
+  background-color: #8F916B;
+  color: #EEEDE7;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+}
+
+.fplink a:hover {
+  background-color: #777959;
+  color: #EEEDE7;
+}
+
+.fplink a:active {
   background-color: #777959;
   color: #EEEDE7;
 }
@@ -184,12 +220,22 @@ p {
   margin-top: 25px;
 }
 
-.footer a:link, a:visited {
+.footer a:link {
   color: #282D1D;
   text-decoration: none;
 }
 
-.footer a:hover, a:active {
+.footer a:visited {
+  color: #282D1D;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #282D1D;
+  text-decoration: underline;
+}
+
+.footer a:active {
   color: #282D1D;
   text-decoration: underline;
 }
@@ -224,15 +270,51 @@ p {
   font-size:20px;
 }
 
+/* Peruslinkit */
+a:link.peruslinkki {
+  color: #282D1D;
+}
+
+a:visited.peruslinkki {
+  color: #282D1D;
+}
+
+a:hover.peruslinkki {
+  color: #777959;
+}
+
+a:active.peruslinkki {
+  color: #777959;
+}
+
+/* Ikonilinkit */
+.some a:link {
+  color: #282D1D;
+}
+
+.some a:visited {
+  color: #282D1D;
+}
+
+.some a:hover {
+  color: #777959;
+}
+
+.some a:active {
+  color: #777959;
+}
+
+
 /*tabletti*/
 @media only screen and (min-width: 700px) {
   .content {
     width: 85%;
+    font-size: 18px;
   }
 
   .Navbar {
     display: flex;
-    padding: 16px;
+    padding: 18px;
     width: 85%;
     margin: auto;
   }
@@ -273,6 +355,10 @@ p {
 
   h1 {
     font-size: 36px;
+  }
+
+  h2 {
+    font-size: 20px;
   }
 }
 
