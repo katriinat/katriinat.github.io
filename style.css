@@ -66,6 +66,7 @@ h1 {
 h1.hidden {
   visibility: hidden;
   font-size: 1px;
+  color: #EEEDE7;
 }
 
 h2 {
