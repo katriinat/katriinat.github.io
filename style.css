@@ -9,14 +9,6 @@ html, body {
   flex-direction: column;
 }
 
-/*
-div {
-  border: 1px;
-  border-color: black;
-  border-style: solid;
-}
-*/
-
 body {
   font-size:calc(16px + 0.390625vw);
 }
@@ -67,18 +59,17 @@ h2 {
 
 h1 {
   text-transform: uppercase;
-  /*
-  font-size: 28px;
-  */
   font-weight: bold;
   text-align: center;
 }
 
+h1.hidden {
+  visibility: hidden;
+  font-size: 1px;
+}
+
 h2 {
   text-transform: uppercase;
-  /*
-  font-size: 20px;
-  */
   font-weight: bold;
   margin: 0;
   padding: 0;
@@ -87,24 +78,14 @@ h2 {
 p {
   padding-bottom: 10px;
   margin-top: 0;
-  /*
-  font-size: 18px;
-  */
 }
 
 
 .lead {
-  /*
-  font-size: 22px;
-  */
   text-align: center;
-
 }
 
 .leadcontent {
-  /*
-  font-size: 22px;
-  */
   text-align: center;
 }
 
@@ -124,9 +105,6 @@ p {
 
 /* Logolinkin muotoilu */
 .Navbar__Link-brand a:link {
-  /*
-  font-size: 32px;
-  */
   font-family: 'Audiowide', cursive;
   font-weight: bold;
   text-decoration: none;
@@ -135,9 +113,6 @@ p {
 }
 
 .Navbar__Link-brand a:visited {
-  /*
-  font-size: 32px;
-  */
   font-family: 'Audiowide', cursive;
   font-weight: bold;
   text-decoration: none;
@@ -157,18 +132,12 @@ p {
 .Navbar__Link a:link {
   text-decoration: none;
   color: #282D1D;
-  /*
-  font-size: 20px;
-  */
   text-transform: uppercase;
 }
 
 .Navbar__Link a:visited {
   text-decoration: none;
   color: #282D1D;
-  /*
-  font-size: 20px;
-  */
   text-transform: uppercase;
 }
 
@@ -202,12 +171,9 @@ p {
 
 .fplink a:link {
   background-color: #8F916B;
-  color: #EEEDE7;
+  color: #FFFFFF;
   text-transform: uppercase;
   font-weight: bold;
-  /*
-  font-size: 26px;
-  */
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: center;
@@ -218,12 +184,9 @@ p {
 
 .fplink a:visited {
   background-color: #8F916B;
-  color: #EEEDE7;
+  color: #FFFFFF;
   text-transform: uppercase;
   font-weight: bold;
-  /*
-  font-size: 26px;
-  */
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: center;
@@ -234,12 +197,12 @@ p {
 
 .fplink a:hover {
   background-color: #777959;
-  color: #EEEDE7;
+  color: #FFFFFF;
 }
 
 .fplink a:active {
   background-color: #777959;
-  color: #EEEDE7;
+  color: #FFFFFF;
 }
 
 .footer {
@@ -250,9 +213,6 @@ p {
 
 .footer p {
   text-align: center; 
-  /*
-  font-size: 18px;
-  */
   margin-top: 25px;
 }
 
@@ -283,9 +243,6 @@ p {
 /* Somenapit */
 .some i {
   padding: 20px;
-  /*
-  font-size: 40px;
-  */
   width: 50px;
   text-align: center;
   text-decoration: none;
@@ -303,12 +260,6 @@ p {
   margin:0;
   padding:0;
 }
-
-/*
-.some a span{
-  font-size:20px;
-}
-*/
 
 /* Peruslinkit */
 a:link.peruslinkki {
@@ -352,9 +303,6 @@ a:active.peruslinkki {
 @media only screen and (min-width: 1171px) {
   .content {
     width: 85%;
-    /*
-    font-size: 18px;
-    */
   }
 
   .Navbar {
@@ -387,9 +335,6 @@ a:active.peruslinkki {
 
 /* leadin muotoilu */
   .lead {
-    /*
-    font-size: 22px;
-    */
     margin-top: 60px;
   } 
 
