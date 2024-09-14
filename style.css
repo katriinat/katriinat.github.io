@@ -1,405 +1,72 @@
+/* Fontti */
 html, body {
-  background-color: #EEEDE7;
-  color: #282D1D;
-  margin: 0;
-  padding: 0;
-  font-family: 'Quicksand', sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+/* Ilmaa osioiden väliin */
+section {
+    padding: 60px 0;
+  }
+
+/* Korttikuvien koot */
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+  }
+
+/* Navigaation taustaväri */
+.navbar {
+    background-color: #F8FAE8;
+  }
+
+/* Bg-light-sävy. Important kirjoittaa Bootstrapin oman sävyn päälle. */
+.bg-light {
+  background-color: #fffdf0 !important; 
 }
 
-body {
-  font-size:calc(16px + 0.390625vw);
+/* Buttonien rajaviivan väri */
+.btn-outline-primary {
+  border-color: #CCD5AE; 
 }
 
-
-h1 {
-  font-size: 1.8rem;
-}
-  
-h2 {
-  font-size: 1.5rem;
+/* Buttonien hover-tilan taustaväri ja teksti */
+.btn-outline-primary:hover {
+  background-color: #CCD5AE; 
+  color: #282D1D; 
+  border-color: #CCD5AE; 
 }
 
-
-/*Navigaatio*/
-.Navbar {
-  display: flex;
-  padding: 16px;
-  width: 85%;
-  margin: auto;
+/* Taulukon otsikkorivin taustaväri */
+table thead th {
+  background-color: #CCD5AE !important;
 }
 
-.Navbar__Items {
-  display: flex;
+/* Aktiivisen haitariosion taustaväri ja rajaviiva */
+.accordion-button:not(.collapsed) {
+  background-color: #CCD5AE;
+  border-color: #CCD5AE !important; 
+  box-shadow: none !important; 
 }
 
-.Navbar__Link {
-  padding-right: 15px;
+/* Suljetun haitariosion rajaviiva */
+.accordion-button {
+  border-color: #CCD5AE !important;
+  box-shadow: none !important; 
 }
 
-.Navbar__Items {
-  margin-left: auto;
-}
-
-.Navbar__Link-toggle {
-  display: none;
-}
-
-.Navbar__Link-brand {
-  padding-right: 15px;
-}
-
-/*Yleiset*/
-.content {
-  width: 85%;
-  margin: auto;
-}
-
-h1 {
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
-}
-
-h1.hidden {
-  visibility: hidden;
-  font-size: 1px;
-  color: #EEEDE7;
-}
-
-h2 {
-  text-transform: uppercase;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  padding-bottom: 10px;
-  margin-top: 0;
-}
-
-
-.lead {
-  text-align: center;
-}
-
-.leadcontent {
-  text-align: center;
-}
-
-.content img {
-  width: 100%;
-  padding-top: 15px;
-  padding-bottom: 20px;
-}
-
-.pienikuva img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-  padding-bottom: 35px;
-}
-
-/* Logolinkin muotoilu */
-.Navbar__Link-brand a:link {
-  font-family: 'Audiowide', cursive;
-  font-weight: bold;
-  text-decoration: none;
-  color: #282D1D;
-  text-transform: uppercase;
-}
-
-.Navbar__Link-brand a:visited {
-  font-family: 'Audiowide', cursive;
-  font-weight: bold;
-  text-decoration: none;
-  color: #282D1D;
-  text-transform: uppercase;
-}
-
-.Navbar__Link-brand a:hover {
+/* Peruslinkin muotoilut */
+a:link {
   color: #282D1D;
 }
 
-.Navbar__Link-brand a:active {
+a:visited {
   color: #282D1D;
 }
 
-/* Navilinkkien muotoilu */
-.Navbar__Link a:link {
-  text-decoration: none;
-  color: #282D1D;
-  text-transform: uppercase;
-}
-
-.Navbar__Link a:visited {
-  text-decoration: none;
-  color: #282D1D;
-  text-transform: uppercase;
-}
-
-.Navbar__Link a:hover {
+a:hover {
   color: #777959;
 }
 
-.Navbar__Link a:active {
+a:active {
   color: #777959;
-}
-
-/* Sticky header */
-.header {
-  background-color: #EEEDE7;
-  position: sticky; 
-  top: 0;
-}
-
-/* Container for flexboxes */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Neljä kolumnia */
-.column {
-  flex: 50%;
-}
-
-/* Etusivun linkkilaatikot  */
-
-.fplink a:link {
-  background-color: #8F916B;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.5rem;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  width: 100%;
-}
-
-.fplink a:visited {
-  background-color: #8F916B;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  width: 100%;
-}
-
-.fplink a:hover {
-  background-color: #777959;
-  color: #FFFFFF;
-}
-
-.fplink a:active {
-  background-color: #777959;
-  color: #FFFFFF;
-}
-
-.footer {
-  background-color: #DDB040;
-  width: 100%;
-  margin-top: auto;
-}
-
-.footer p {
-  text-align: center; 
-  margin-top: 25px;
-}
-
-.footer a:link {
-  color: #282D1D;
-  text-decoration: none;
-}
-
-.footer a:visited {
-  color: #282D1D;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  color: #282D1D;
-  text-decoration: underline;
-}
-
-.footer a:active {
-  color: #282D1D;
-  text-decoration: underline;
-}
-
-.some ul {
-  list-style-type: none;
-}
-
-/* Somenapit */
-.some i {
-  padding: 20px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.some i:hover {
-  color: #777959;
-}
-
-.some a{
-  text-decoration:none;
-  width:100%;
-  height:100%;
-  display:block;
-  margin:0;
-  padding:0;
-}
-
-/* Peruslinkit */
-a:link.peruslinkki {
-  color: #282D1D;
-}
-
-a:visited.peruslinkki {
-  color: #282D1D;
-}
-
-a:hover.peruslinkki {
-  color: #777959;
-}
-
-a:active.peruslinkki {
-  color: #777959;
-}
-
-/* Ikonilinkit */
-.some a:link {
-  color: #282D1D;
-}
-
-.some a:visited {
-  color: #282D1D;
-}
-
-.some a:hover {
-  color: #777959;
-}
-
-.some a:active {
-  color: #777959;
-}
-
-.column p {
-  padding-top: 15px;
-}
-
-/*tabletti*/
-@media only screen and (min-width: 1171px) {
-  .content {
-    width: 85%;
-  }
-
-  .Navbar {
-    display: flex;
-    padding: 18px;
-    width: 85%;
-    margin: auto;
-  }
-
-  .column {
-    flex: 50%;
-  }
-
-  .column p {
-    padding-right: 15px;
-    width: 95%;
-  }
-
-  .fplink {
-    width: 95%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .column img {
-    width: 95%;
-  }
-
-
-/* leadin muotoilu */
-  .lead {
-    margin-top: 60px;
-  } 
-
-/*
-  .leadcontent {
-    font-size: 22px;
-  } 
-*/
-
-/*
-  h1 {
-    font-size: 36px;
-  }
-*/
-
-/*
-  h2 {
-    font-size: 20px;
-  }
-  */
-}
-
-/*pöytäkone*/
-@media only screen and (min-width: 1500px) {
-  .content {
-    width: 55%;
-  }
-
-  .Navbar {
-    display: flex;
-    padding: 16px;
-    width: 55%;
-    margin: auto;
-  }
-}
-
-/* On screens that are 1170px wide or less, make the columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 1170px) {
-  .row {
-    flex-direction: column;
-  }
-  .Navbar__Items,
-  .Navbar {
-    flex-direction: column;
-  }
-    
-  .Navbar__Items {
-    display:none;
-  }
-    
-  .Navbar__Items {
-    margin-left:0;
-  }
-    
-  .Navbar__ToggleShow {
-    display: flex;
-  }
-    
-  .Navbar__Link-toggle {
-    align-self: flex-end;
-    display: initial;
-    position: absolute;
-    cursor: pointer;
-   } 
-
 }

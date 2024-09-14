@@ -1,93 +1,402 @@
 <!DOCTYPE html>
-<html lang="fi">
-    <head>
-        <title>Katriina Tiainen</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="header">
-            <div class="Navbar">
-                    <div class="Navbar__Link-brand">
-                      <a href="index.html">Katriina Tiainen</a>
-                    </div>
-                  <div class="Navbar__Link Navbar__Link-toggle">
-                    <i class="fa fa-bars" style="font-size: 36px"></i>
-                  </div>
-                <nav class="Navbar__Items">
-                  <div class="Navbar__Link">
-                    <a href="kukaolen.html">Kuka olen</a>
-                  </div>
-                  <div class="Navbar__Link">
-                    <a href="tyohistoriani.html">Työhistoriani</a>
-                  </div>
-                  <div class="Navbar__Link">
-                    <a href="koulutustaustani.html">Koulutustaustani</a>
-                  </div>
-                  <div class="Navbar__Link">
-                    <a href="otayhteytta.html">Ota yhteyttä</a>
-                  </div>
-                </nav>
-              </div>
-        </div>
+<html lang="en">
+<head>
+  <title>Katriinan käsityöt</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Omat tyylit -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Ikonit -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-        <div class="content">
-            <div class="row">
-            <div class="column">
-                <img src="katriinatiainen.jpg" alt="Kuva hymyilevästä Katriinasta">
-            </div>
+</head>
+<body>
 
-            <div class="column">
-                <h1 class="hidden">Katriina Tiainen</h1>
-                <p class="lead">Moi! Olen Katriina, pistämätön tietoalan ammattilainen. Hyppää syvemmälle ja tutustu minuun ja osaamiseeni!</p>
-            </div>
-
-            <div class="column">
-              <div class="fplink">
-                    <a href="kukaolen.html">Kuka olen</a>
-              </div>
-                <p>Olen pirteä ja neuvokas valtion virkahenkilö, joka on onnellisimmillaan lankakerien ympäröimänä. Intohimonani on uuden oppiminen – ja salmiakki.</p>
-            </div>
-
-            <div class="column">
-                <div class="fplink">
-                    <a href="tyohistoriani.html">Työhistoriani</a>
-                </div>
-                <p>Minulla on vankka työkokemus kirjasto- ja tietopalvelualalta. Olen työskennellyt viimeiset kymmenen vuotta valtion erikoiskirjastoissa monipuolisissa työtehtävissä.</p>
-            </div>
-           
-            <div class="column">
-                <div class="fplink">
-                    <a href="koulutustaustani.html">Koulutustaustani</a>
-                </div>
-                <p>Olen opiskellut sekä humanistisia että luonnontieteellisiä aloja. Minulla on maisterintutkinnot englantilaisesta filologiasta ja tieto- ja asiakirjahallinnosta, ja tällä hetkellä opiskelen it-tradenomiksi.</p>
-            </div>
-            
-            <div class="column">
-                <div class="fplink">
-                    <a href="otayhteytta.html">Ota yhteyttä</a>
-                </div>
-                <p>Haluatko tutustua minuun tarkemmin? Heräsikö mielessäsi jotain kysyttävää? Laita viestiä, niin olen sinuun pian yhteydessä! </p>
-            </div>
-        </div>
+  <!-- Navigaatio -->
+  <nav class="navbar navbar-expand-md sticky-top">
+    <div class="container-xxl">
+      <a href="#alku" class="navbar-brand">
+        <span class="fw-bold text-secondary">
+          <!-- Saksi-ikonit lisätty tänne -->
+          <i class="bi bi-scissors" aria-hidden="true"></i> Katriinan käsityöt <i class="bi bi-scissors"></i>
+        </span>
+      </a>
+      <!-- Hampurilaisvalikko pienille näytöille -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navigaation linkit -->
+      <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+        <ul class="navbar-nav align-items-end">
+          <li class="nav-item">
+            <a class="nav-link" href="#alku">Tervetuloa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#neulotut">Neulotut käsityöt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#virkatut">Virkatut käsityöt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tilastot">Tilastot</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tietoa">Tietoa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#karuselli">Selaile sukkia</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-        <div class="footer">
-            <p>© Katriina Tiainen 2023 | <a href="otayhteytta.html">Ota yhteyttä</a></p>
+  <!-- Tässä ruudukko, jossa yhdellä palstalla teksti ja toisella kuva. Ruudukko on määritelty niin, että teksti ja kuvat pysyvät mukavan kokoisina eri kokoisilla näytöillä. Pienimmällä näytöllä kuvaa ei näytetä ollenkaan. -->
+   <section id="alku">
+    <div class="container-lg">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-5 text-center text-md-start">
+          <h1>
+            <div class="display-2">Katriinan käsityöt</i></div>
+          </h1>
+          <p class="lead my-4">Tervetuloa tutustumaan käsitöihini! Sivulle on koottu valikoituja, vuosien varrella virkkaamiani ja neulomiani käsitöitä.</p>
         </div>
-    <script>
-    function classToggle() {
-        const navs = document.querySelectorAll('.Navbar__Items')
+        <div class="col-md-5 text-center d-none d-md-block">
+          <img class="img-fluid" src="/assets/lanka.png" alt="lankasyherö">
+        </div>
+      </div>
+    </div>
+   </section>
+
+  <!-- Korttiosio. Tein kaksi erillistä korttiosiota. Linkkinappi on vähän mälsä niille, joilla ei ole Ravelry-tiliä, mutta toisaalta niillä, joita kiinnostaa nämä projektit, niihin käytetyt langat, ohjeet jne. enemmän, ovat yleensä Ravelryn käyttäjiä muutenkin ja pääsevät näkemään yksityiskohtaiset tiedot napin kautta. Nämäkin on pyritty määrittelemään niin, että näyttävät kivalta eri kokoisilla näytöillä. Kuvat näkyvät ehkä vähän ikävästä joissain koissa johtuen siitä, että osa kuvista on vaakakuvia ja osa pystykuvia (tyylitiedostossa määrittelin kuvat näkymään kaikki samankorkuisina). -->
+   <section id="neulotut" class="bg-light mt-5">
+    <div class="container-lg">
+      <div class="text-center">
+        <h2>Neulotut käsityöt </h2>
+        <p>Tutustu neulomuksiini! Jos sinulla on Ravelry-tili, voit tutustua kunkin käsityön tarkempiin yksityiskohtiin Ravelry-linkin kautta.</p>
+      </div>
+
+      <div class="row my-5 align-items-center justify-content-center">
+        <!-- Isoilla näytöillä neljä vierekkäin, keskikokoisilla kaksi ja pienillä yksi. -->
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <img src="/assets/crikey.jpg" class="card-img-top img-fluid" alt="krokosukka">
+            <div class="card-body">
+              <h3 class="card-title">Krokosukat</h3>
+              <p class="card-text text-muted">Nämä veikeät krokotiilisukat neuloin serkulleni joululahjaksi.</p>
+              <a href="https://www.ravelry.com/projects/Magnisinootti/crikey" class="btn btn-outline-primary">Ravelry</a>
+            </div>
+          </div>
+        </div>
         
-        navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
-      }
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <img src="/assets/aivopuolisko.jpg" class="card-img-top img-fluid" alt="Hattu, jossa toisella puolella aivot">
+            <div class="card-body">
+              <h3 class="card-title">Aivopuolisko</h3>
+              <p class="card-text text-muted">Pipo ystävälleni, joka toimii toisena aivopuoliskonani.</p>
+              <a href="https://www.ravelry.com/projects/Magnisinootti/brain-hat-knitting-pattern" class="btn btn-outline-primary">Ravelry</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <img src="/assets/ausable.jpg" class="card-img-top img-fluid" alt="vihreä villatakki">
+            <div class="card-body">
+              <h3 class="card-title">Toimistotakki</h3>
+              <p class="card-text text-muted">Neuloin itselleni töihin paksun merinovillatakin.</p>
+              <a href="https://www.ravelry.com/projects/Magnisinootti/ausable" class="btn btn-outline-primary">Ravelry</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <img src="/assets/meriheppa.jpg" class="card-img-top img-fluid" alt="tumput, joissa merihevoskuvio">
+            <div class="card-body">
+              <h3 class="card-title">Merihepat</h3>
+              <p class="card-text text-muted">Puolisolle neulotut, paksut merihevoskuvioidut lapaset.</p>
+              <a href="https://www.ravelry.com/projects/Magnisinootti/selbuvott-or-not-alias-selbu-sea-horse-mittens" class="btn btn-outline-primary">Ravelry</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+   </section>
+
+   <section id="virkatut" class="bg-light mt-5">
+    <div class="container-lg">
+      <div class="text-center">
+        <h2>Virkatut käsityöt</h2>
+        <p>Tutustu virkkuutöihini! Jos sinulla on Ravelry-tili, voit tutustua kunkin käsityön tarkempiin yksityiskohtiin Ravelry-linkin kautta.</p>
+      </div>
+
+      <div class="row my-5 align-items-center justify-content-center">
+
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <img src="/assets/mobile.jpg" class="card-img-top img-fluid" alt="mobile, jossa kuumailmapalloja ja pilviä">
+            <div class="card-body">
+              <h3 class="card-title">Mobile</h3>
+              <p class="card-text text-muted">Kuumailmapallomobilen tein ystäväni lapselle.</p>
+              <a href="https://www.ravelry.com/projects/Magnisinootti/hot-air-balloons-in-the-clouds" class="btn btn-outline-primary">Ravelry</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <img src="/assets/herkkukassi.jpg" class="card-img-top img-fluid" alt="Virkattu vihreä kassi sekä erilaisia virkattuja herkkuja">
+            <div class="card-body">
+              <h3 class="card-title">Herkkukassi</h3>
+              <p class="card-text text-muted">Veljentyttöni sai 2-vuotislahjaksi kestäviä herkkuja.</p>
+              <a href="https://www.ravelry.com/projects/Magnisinootti/market-bag-2" class="btn btn-outline-primary">Ravelry</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <img src="/assets/viuhkamerkki.jpg" class="card-img-top img-fluid" alt="vihreä kirjanmerkki">
+            <div class="card-body">
+              <h3 class="card-title">Kirjanmerkki</h3>
+              <p class="card-text text-muted">Entiselle työkaverille muistoksi viuhkamainen kirjanmerkki.</p>
+              <a href="https://www.ravelry.com/projects/Magnisinootti/fan-bookmarke" class="btn btn-outline-primary">Ravelry</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <img src="/assets/kettu.jpg" class="card-img-top img-fluid" alt="kettupehmolelu">
+            <div class="card-body">
+              <h3 class="card-title">Merihepat</h3>
+              <p class="card-text text-muted">Uninen kettu veljentyttöni unia siivittämään.</p>
+              <a href="https://www.ravelry.com/projects/Magnisinootti/selbuvott-or-not-alias-selbu-sea-horse-mittens" class="btn btn-outline-primary">Ravelry</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+   </section>
+
+  <!-- Tässä taulukko. Tein sen responsiivisena taulukkona, eli jos sarakkeita olisi useampia, tulisi pienillä näytöillä siihen vierityspalkki. -->
+  <section id="tilastot" class="bg-light mt-5">
+    <div class="container-lg">
+      <div class="text-center">
+        <h2>Tilastot</h2>
+          <p>Joitakin tilastotietoja käsitöistäni.</p>
+        
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Aihe</th>
+                <th scope="col">Määrä</th>
+                <th scope="col">Huomioita</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Neuletöitä</td>
+                <td>174 kpl</td>
+                <td>Suurin osa näistä on sukkia.</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Virkkuutöitä</td>
+                <td>75 kpl</td>
+                <td>Yllättävän vähän suhteessa neuletöihin!</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Lankaa käytetty</td>
+                <td>48 774 m</td>
+                <td>En oikein osaa päättää, onko tämä paljon vai vähän.</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Neulepuikkoja</td>
+                <td>62</td>
+                <td>Sukkapuikkoja suurin osa. </td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Virkkuukoukkuja</td>
+                <td>15 kpl</td>
+                <td>Osa ikivanhoja perintökaluja</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <!-- Tässä haitari. Ensimmäinen haitariosio on valmiiksi auki. -->
+   <section id="tietoa" class="bg-light mt-5">
+    <div class="container-lg">
+      <div class="text-center">
+        <h2>Tietoa</h2>
+          <p>Täältä löydät vastauksia mieleesi ehkä juolahtaneisiin kysymyksiin.</p>
       
-      document.querySelector('.Navbar__Link-toggle')
-        .addEventListener('click', classToggle);</script>
-    </body>
+          <div class="row my-5 align-items-center justify-content-center">
+
+            <div class="accordion" id="kysymykset">
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="otsikko-1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#kysymys-1" aria-expanded="true" aria-controls="kysymys-1">
+                    Kuka Katriina?
+                  </button>
+                </h2>
+                <div id="kysymys-1" class="accordion-collapse collapse show" data-bs-parent="#kysymykset">
+                  <div class="accordion-body text-start">
+                    <p>Olen puuhaillut lankojen kanssa alle kouluikäisestä asti. Lempipuuhaani on neuloa tai virkata jotakin ja katsoa pukudraamoja tai brittidekkareita. Harrastukseni myötä minä, puolisoni, kaikki veljentyttöni sekä ystäväni olemme melko lailla villalla kuorrutettuja, mutta onneksi käsitöitä voi myös helposti lahjoittaa hyväntekeväisyyteen.
+                    Tänä vuonna käsityötahti on kovasti hidastunut, sillä aloitin viime syksynä opiskelun töiden ohessa, ja kesällä perheeseeni syntyi suloinen vauva pakkaa sekoittamaan.</p> 
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="otsikko-2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kysymys-2" aria-expanded="false" aria-controls="kysymys-2">
+                    Mistä löydän loput Katriinan käsityöt?
+                  </button>
+                </h2>
+                <div id="kysymys-2" class="accordion-collapse collapse" data-bs-parent="#kysymykset">
+                  <div class="accordion-body text-start">
+                    <p>Tällä sivulla on esitelty vain muutama tekemäni käsityö. Kaikki projektini löydät <a href="https://www.ravelry.com/people/Magnisinootti">Ravelry-sivuiltani</a>. Projektieni tarkasteluun tarvitset Ravelry-tunnukset.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="otsikko-3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kysymys-3" aria-expanded="false" aria-controls="kysymys-3">
+                    Millaisia lankoja käsitöissä on käytetty?
+                  </button>
+                </h2>
+                <div id="kysymys-3" class="accordion-collapse collapse" data-bs-parent="#kysymykset">
+                  <div class="accordion-body text-start">
+                  <p>En ole kovinkaan nirso lankojen suhteen. Ostan langat yleensä Lankamaailmasta tai Snurresta, ja suosin merinovillaa neuleissa ja puuvillaa virkkuutöissä. Akryylilankoja en käytä, mutta sukkalangaksi valitsen mielelläni hyvän määrän polyamidia sisältävät villalangat.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="otsikko-4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kysymys-4" aria-expanded="false" aria-controls="kysymys-4">
+                    Millaiset puikot ja koukut ovat käytössä?
+                  </button>
+                </h2>
+                <div id="kysymys-4" class="accordion-collapse collapse" data-bs-parent="#kysymykset">
+                  <div class="accordion-body text-start">
+                  <p>Minulla on aimo kasa äitini ja isoäitieni vanhoja puikkoja ja koukkuja, mutta olen pikkuhiljaa korvannut niitä nykyaikaisemmilla ja paremmassa kunnossa olevilla työvälineillä. Suosin hiilikuitupuikkoja ja ergonomisia koukkuja. Neulon oikeastaan kaiken pyöröpuikoilla, sukat ja muut pienemmät työt Magic loop -tekniikalla.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Tässä kuvakaruselliosio -->
+  <section id="karuselli" class="bg-light mt-5">
+    <div class="container-lg">
+      <div class="text-center">
+        <h2>Selaile sukkia</h2>
+        <p>Neulon paljon sukkia. Kurkkaa, millaisia!</p>
+        <div id="sukat" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#sukat" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#sukat" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#sukat" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#sukat" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#sukat" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#sukat" data-bs-slide-to="5"></button>
+            <button type="button" data-bs-target="#sukat" data-bs-slide-to="6"></button>
+          </div>
+
+          <!-- Karuselli -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                  <img src="/assets/20201029_065843023_iOS.jpg" alt="yksisarvissukat" class="d-block w-100 img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                  <img src="/assets/20201029_065928094_iOS.jpg" alt="keltavihreät sukat" class="d-block w-100 img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                  <img src="/assets/20201126_121253075_iOS.jpg" alt="vihervalkoiset sukat" class="d-block w-100 img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                  <img src="/assets/20210206_133727690_iOS.jpg" alt="siniset pitsisukat" class="d-block w-100 img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                  <img src="/assets/20210417_152928726_iOS.jpg" alt="siniset sukat" class="d-block w-100 img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                  <img src="/assets/20210417_153252090_iOS.jpg" alt="vihreät sukat" class="d-block w-100 img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                  <img src="/assets/20220209_093403263_iOS.jpg" alt="värikkäät sukat" class="d-block w-100 img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nämä prev- ja next-ikonit jäivät vähän huonosti kuvien ulkopuolelle muissa kuin mobiilinäytöissä. -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#sukat" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#sukat" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
+  <!-- -->
+
+
+
+
+
