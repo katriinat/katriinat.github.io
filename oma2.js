@@ -1,5 +1,5 @@
 // Haetaan JSON-data Githubista
-fetch("https://raw.githubusercontent.com/katriinat/katriinat.github.io/refs/heads/main/digitekniikat.JSON")
+fetch("https://raw.githubusercontent.com/katriinat/katriinat.github.io/refs/heads/main/toteutustiedot.JSON")
 
     // Muunnetaan vastaus JSON-muotoon
     .then(function (response) {
