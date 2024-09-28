@@ -27,16 +27,14 @@ function kerro(data){
 
     // Muiden tietojen käsittely
     teksti = teksti + "<p>" + data.kuvaus + "</p>";
-    teksti = teksti + "<p><img src='" + data.kuva + "' alt='kuva' ></p>";
-    teksti = teksti + "<h3>Opintojakso " + data.opintojakso.nimi + " " + data.opintojakso.tunnus + " " + data.opintojakso.opintopisteet + " op" + "</h3>";
-    teksti = teksti + "<ul>"
-        for(var i = 0; i < data.sisalto.length; i++) {
-        teksti = teksti + "<li>" + data.sisalto[i] + "</li>";
-        }
-    teksti = teksti + "</ul>";
-    teksti = teksti + "<h3>Linkit " + "</h3>" + "<ul>"
-        for (var i = 0; i < data.tekniikat.length; i++) {
-            teksti = teksti + "<li>" + data.tekniikat[i].aihe + " <a href='" + data.tekniikat[i].linkki + "'>" + data.tekniikat[i].linkki + "</a></li>";
+    teksti = teksti + "<p><img src='" + data.kuva + "' alt='Työntekijöitä Rautakonttorin tietokonekeskuksessa Rautatalossa' ></p>";
+    teksti = teksti + "<h3>" + data.toteutus.nimi + " " + data.toteutus.tunnus + " " + data.toteutus.opintopisteet + " op" + "</h3>";
+    teksti = teksti + "<p>Toteutuksen ajankohta: " + data.alkupvm + "-" + data.loppupvm + "</p>";
+    teksti = teksti + "<p>Toteutuksen kesto: " + data.kesto + " viikkoa" + "</p>";
+    teksti = teksti + "<p>Osallistujien lukumäärä: " + data.osallistujat_lkm + "</p>";
+    teksti = teksti + "<h4>Osallistujat " + "</h4>" + "<ul>"
+        for (var i = 0; i < data.osallistujat.length; i++) {
+            teksti = teksti + "<li>" + data.osallistujat[i].etunimi + data.osallistujat[i].sukunimi + "</li>";
         }
     teksti = teksti + "</ul>";
 

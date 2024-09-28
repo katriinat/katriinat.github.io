@@ -1,0 +1,31 @@
+{
+    "otsikko":"Toteutuksen tiedot",
+    "kuvaus":"Tälle sivustolle haetaan Digitekniikat-kurssitoteutuksen tiedot",
+    "kuva":"https://github.com/katriinat/katriinat.github.io/tietokonekeskus.jpg",
+    "toteutus":{
+                "nimi":"Digitekniikat",
+                "tunnus":"DIG007AS2A-3012",
+                "opintopisteet":"5"
+                },
+    "osallistujat_lkm":"15",
+    "osallistujat":[
+        {"etunimi":"Marjatta", "sukunimi":"Laine"},
+        {"etunimi":"Petteri", "sukunimi":"Hartikainen"},
+        {"etunimi":"Inkeri", "sukunimi":"Laitinen"},
+        {"etunimi":"Markku", "sukunimi":"Salmela"},
+        {"etunimi":"Helena", "sukunimi":"Virtanen"},
+        {"etunimi":"Antero", "sukunimi":"Rajala"},
+        {"etunimi":"Matti", "sukunimi":"Parviainen"},
+        {"etunimi":"Pekka", "sukunimi":"Paananen"},
+        {"etunimi":"Kalevi", "sukunimi":"Jääskeläinen"},
+        {"etunimi":"Jari", "sukunimi":"Toivanen"},
+        {"etunimi":"Juhani", "sukunimi":"Laukkanen"},
+        {"etunimi":"Jukka", "sukunimi":"Nevalainen"},
+        {"etunimi":"Riitta", "sukunimi":"Rantanen"},
+        {"etunimi":"Olavi", "sukunimi":"Heino"},
+        {"etunimi":"Sinikka", "sukunimi":"Salo"}
+        ],
+    "alkupvm":"19.8.2024",
+    "loppupvm":"11.10.2024",
+    "kesto":"8"
+}
