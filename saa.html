@@ -102,9 +102,9 @@
 
             teksti = teksti + "</ul>";
 
-            // Sääkuva ja sen keskitys
+            // Sääkuva
             var kuva = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
-            teksti = teksti + "<p><img src='" + kuva + "' alt='Sääkuvake' class='mx-auto d-block'></p>";
+            teksti = teksti + "<p><img src='" + kuva + "' alt='Sääkuvake'></p>";
 
             // Tulostetaan tiedot oikeaan elementtiin
             document.getElementById(id).innerHTML = teksti;

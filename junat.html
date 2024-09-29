@@ -40,11 +40,65 @@
     <div class="container-lg"> 
         <div class="row justify-content-center align-items-center">
             <div class="col-md-9"> 
+                <h1>Mennäänkö junalla Tampereelle?</h1>
+                <p>Kuinkahan usein junia menee?</p>
                 <div id="vastaus"></div>
             </div>
         </div>
     </div>
     <script>
+        // Haetaan JSON-data
+        fetch('https://rata.digitraffic.fi/api/v1/live-trains/station/HKI?departing_trains=100&include_nonstopping=false')
         
+            // Muunnetaan vastaus JSON muotoon
+            .then(function (response) { return response.json(); })
+        
+            // Käsitellään muunnettu (eli JSON muotoinen) vastaus
+            .then(function (responseJson) {
+                // Kutsutaan funktiota ja välitetään sille json-vastaus 
+                junat(responseJson);
+            })
+        
+            // Jos tuli jokin virhe
+            .catch(function (error) { 
+                document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan </p>" + error;
+            });
+        
+        // Funktio, jolla haetaan ja listataan Helsingistä Tampereelle menevät junat
+        function junat(data) {
+            var teksti = "<ul>";
+            for (var i = 0; i < data.length; i++) {
+                var lahtoaika, saapumisaika;
+        
+                for (var j = 0; j < data[i].timeTableRows.length; j++) {
+                    // Lähtöaika, kun lähtöasema HKI
+                    if (data[i].timeTableRows[j].stationShortCode === "HKI" && data[i].timeTableRows[j].type === "DEPARTURE") {
+                    lahtoaika = data[i].timeTableRows[j].scheduledTime;
+                    }
+
+                    // Saapumisaika, kun saapumisasema TPE
+                    if (data[i].timeTableRows[j].stationShortCode === "TPE" && data[i].timeTableRows[j].type === "ARRIVAL") {
+                        saapumisaika = data[i].timeTableRows[j].scheduledTime;
+                    }
+                }
+
+            // Jos löydetään sekä lähtö- että saapumisaika
+            if (lahtoaika && saapumisaika) {
+                var lahtopvm = new Date(lahtoaika);
+                var saapumispvm = new Date(saapumisaika);
+
+                // Format dates to "YYYY-MM-DD" and times to "HH:MM"
+                var lahtaika = lahtopvm.toLocaleDateString('fi-FI') + " klo " + lahtopvm.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' });
+                var saapaika = saapumispvm.toLocaleDateString('fi-FI') + " klo " + saapumispvm.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' });
+                
+                teksti += "<li>Juna nro " + data[i].trainNumber + " lähtee Helsingistä " + lahtaika + ". Saapuu Tampereelle " + saapaika + ".</li>";
+                }   
+            }
+            teksti += "</ul>";
+
+    // Tulostetaan tiedot sivulle
+    document.getElementById("vastaus").innerHTML = teksti;
+        }
     </script>
+
 </body>
