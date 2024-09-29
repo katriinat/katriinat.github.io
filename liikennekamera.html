@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <title>Tehtävä 4</title>  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Ikonit -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body> 
+      <!-- Navigaatio -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+        <div class="container-xxl">
+        <a href="https://katriinat.github.io/liikennekamera" class="navbar-brand">
+            <span>
+            <i class="bi bi-database" aria-hidden="true"></i> Tehtävä 4 <i class="bi bi-database"></i>
+            </span>
+        </a>
+        <!-- Hampurilaisvalikko pienille näytöille -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navigaation linkit -->
+        <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+            <ul class="navbar-nav align-items-end">
+            <li class="nav-item">
+                <a class="nav-link" href="https://katriinat.github.io/liikennekamera">Liikennekamera</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://katriinat.github.io/junat">Junat</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Sisältö ruudukkoon -->
+    <div class="container-lg"> 
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-9"> 
+                <h1>Autolla Tampereelle</h1>
+                <p>Minkälainen keli siellä on?</p>
+                <div id="vastaus"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Haetaan JSON-data
+        fetch('https://tie.digitraffic.fi/api/weathercam/v1/stations/C04507/data')
+    
+            // Muunnetaan vastaus JSON muotoon
+            .then(function (response) { return response.json();
+            })
+    
+            // Käsitellään muunnettu (eli JSON muotoinen) vastaus
+            .then(function (responseJson) {
+    
+            // Kutsutaan funktiota ja välitetään sille json-vastaus 
+            liikennekamerat(responseJson)
+            })
+    
+            // Jos tuli jokin virhe
+            .catch(function (error) { document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan </p>"+ error;
+            })
+    
+        // Funktio, jolla käydään tapahtumat läpi ja haetaan tapahtuman nimi, kuvaus ja url-osoite
+        function liikennekamerat(data) {
+            var teksti = "";
+            for (var i = 0; i < data.presets.length; i++) {
+            teksti = teksti + "<p>" + data.presets[i].measuredTime + "</p>";
+            var kuva = 'https://weathercam.digitraffic.fi/' + data.presets[i].id + '.jpg';
+                teksti = teksti + "<p><img src='" + kuva + "' alt='liikennekamerakuva'></p>";
+            }
+            document.getElementById("vastaus").innerHTML = teksti;
+            }
+    </script>
+</body>
+
+
