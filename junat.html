@@ -87,7 +87,7 @@
                 var lahtopvm = new Date(lahtoaika);
                 var saapumispvm = new Date(saapumisaika);
 
-                // Format dates to "YYYY-MM-DD" and times to "HH:MM"
+                // Muokataan ajan näyttötapaa"
                 var lahtaika = lahtopvm.toLocaleDateString('fi-FI') + " klo " + lahtopvm.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' });
                 var saapaika = saapumispvm.toLocaleDateString('fi-FI') + " klo " + saapumispvm.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' });
                 
