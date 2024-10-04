@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <title>Toteutus</title>  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Ikonit -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Omat tyylit -->
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body> 
+      <!-- Navigaatio -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+        <div class="container-xxl">
+        <a href="https://katriinat.github.io/toteutus" class="navbar-brand">
+            <span>
+            <i class="bi bi-database" aria-hidden="true"></i> JSON-tehtävät <i class="bi bi-database"></i>
+            </span>
+        </a>
+        <!-- Hampurilaisvalikko pienille näytöille -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navigaation linkit -->
+        <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+            <ul class="navbar-nav align-items-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://katriinat.github.io/kurssi">Kurssi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://katriinat.github.io/toteutus">Toteutus</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://katriinat.github.io/tapahtumat">Tapahtumat</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://katriinat.github.io/saa">Sää</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://katriinat.github.io/liikennekamera">Liikennekamera</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://katriinat.github.io/junat">Junat</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Sisältö ruudukkoon -->
+    <div class="container-lg"> 
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-9"> 
+                <div id="asukkaat"></div>
+            </div>
+            <div class="col-md-9"> 
+                <div id="keskiika"></div>
+            </div>
+            <div class="col-md-9"> 
+                <div id="asunnot"></div>
+            </div>
+            <div class="col-md-9"> 
+                <div id="tyopaikat"></div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Tilastotiedot Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <p class="section-title bg-white text-start text-primary pe-3">Tilastotietoa</p>
+                        <h1 class="mb-4">Itä-Pasila numeroina</h1>
+                        <p class="mb-4">Kuinka paljon Itä-Pasilassa on asukkaita? Entä työpaikkoja? Tähän on koottu Itä-Pasilan postinumeroalueen (00520) tilastotietoja.</p>
+                        <a class="btn btn-secondary rounded-pill py-3 px-5 mt-3" href="https://pxdata.stat.fi:443/PxWeb/sq/9896d89e-3b93-4f1e-a18b-51bda3165c54">Lisää lukuja (Tilastokeskus)</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="rounded overflow-hidden">
+                            <div class="row g-0">
+                                <div class="col-sm-6">
+                                    <div class="text-center bg-primary py-5 px-4">
+                                        <i class="bi bi-people text-secondary" style="font-size: 50px;"></i>
+                                        <h1 class="display-6 text-white" data-toggle="counter-up">
+                                            <div id="asukkaat"></div>
+                                        </h1>
+                                        <span class="fs-5 fw-semi-bold text-secondary">Asukasta</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                                    <div class="text-center bg-secondary py-5 px-4">
+                                        <i class="bi bi-person-arms-up text-primary" style="font-size: 50px;"></i>
+                                        <h1 class="display-6" data-toggle="counter-up">
+                                            <div id="keskiika"></div>
+                                        </h1>
+                                        <span class="fs-5 fw-semi-bold text-primary">Keski-ikä</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                    <div class="text-center bg-secondary py-5 px-4">
+                                        <i class="bi bi-houses text-primary" style="font-size: 50px;"></i>
+                                        <h1 class="display-6" data-toggle="counter-up">
+                                            <div id="asunnot"></div>
+                                        </h1>
+                                        <span class="fs-5 fw-semi-bold text-primary">Asuntoa</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                                    <div class="text-center bg-primary py-5 px-4">
+                                        <i class="bi bi-buildings text-secondary" style="font-size: 50px;"></i>
+                                        <h1 class="display-6 text-white" data-toggle="counter-up">
+                                            <div id="tyopaikat"></div>
+                                        </h1>
+                                        <span class="fs-5 fw-semi-bold text-secondary">Työpaikkaa</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tilastotiedot End -->
+
+    <script>
+        // Haetaan JSON-data POST-pyynnöllä
+        fetch("https://pxdata.stat.fi:443/PxWeb/api/v1/fi/Postinumeroalueittainen_avoin_tieto/uusin/paavo_pxt_12f7.px", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "query": [
+                    {
+                        "code": "Postinumeroalue",
+                        "selection": {
+                            "filter": "item",
+                            "values": [
+                                "00520"
+                            ]
+                        }
+                    },
+                    {
+                        "code": "Vuosi",
+                        "selection": {
+                            "filter": "item",
+                            "values": [
+                                "2022"
+                            ]
+                        }
+                    }
+                ],
+                "response": {
+                    "format": "json-stat2"
+                }
+            })
+        })
+        
+        // Muunnetaan vastaus JSON-muotoon
+        .then(function (response) {
+            return response.json();
+        })
+
+        // Käsitellään muunnettu (JSON-muotoinen) vastaus
+        .then(function (responseJson) {   
+            // Kutsutaan funktiota ja välitetään sille JSON-vastaus
+            kerro(responseJson);
+        })
+
+        // Jos tuli virhe
+        .catch(function (error) { 
+            document.getElementById("asukkaat").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+            document.getElementById("keskiika").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+            document.getElementById("asunnot").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+            document.getElementById("tyopaikat").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+        })
+        
+        // Funktio datan näyttämiseen
+        function kerro(data) {
+            // Määritellään muuttujat, joihin tulostettava tieto kerätään
+            var teksti1 = "";
+            var teksti2 = "";
+            var teksti3 = "";
+            var teksti4 = "";
+        
+            // Tarkistetaan onko data olemassa ja sijoitetaan tekstiin
+            if (data && data.value) {
+                teksti1 = teksti1 + data.value[3];
+                teksti2 = teksti2 + "<p>" + data.value[6] + "</p>";
+                teksti3 = teksti3 + "<p>" + data.value[69] + "</p>";
+                teksti4 = teksti4 + "<p>" + data.value[74] + "</p>";
+            } else {
+                teksti1 = teksti1 + "<p>Jotain meni mönkään.</p>";
+                teksti2 = teksti2 + "<p>Jotain meni mönkään.</p>";
+                teksti3 = teksti3 + "<p>Jotain meni mönkään.</p>";
+                teksti4 = teksti4 + "<p>Jotain meni mönkään.</p>";
+            }
+        
+            // Teksti-muuttujien sisällön tulostus
+            document.getElementById("asukkaat").innerHTML = teksti1;
+            document.getElementById("keskiika").innerHTML = teksti2;
+            document.getElementById("asunnot").innerHTML = teksti3;
+            document.getElementById("tyopaikat").innerHTML = teksti4;
+        }
+    </script>
+</body>
