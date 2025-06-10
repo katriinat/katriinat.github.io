@@ -71,15 +71,17 @@ a:active {
   color: #777959;
 }
 
-/* Näkyvyys Ctrl+F:lle myös suljetuissa osioissa */
+/* Estä Bootstrapia käyttämästä display: none */
 .accordion-collapse {
-  display: block !important;     /* Estää DOMista piilottamisen */
+  display: block !important; /* Pidä DOMissa */
 }
 
+/* Kun ei ole .show-luokkaa, tee visuaalisesti piilotettu mutta teknisesti "näkyvä" */
 .accordion-collapse:not(.show) {
-  height: 0 !important;
+  height: 1px !important;         /* Ei saa olla 0, muuten osa selaimista ei huomioi sisältöä */
   overflow: hidden !important;
-  visibility: hidden;            /* Ei näy visuaalisesti */
-  padding: 0 !important;
-  margin: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important; /* Estää tilavarauksen */
+  z-index: -1;
 }
