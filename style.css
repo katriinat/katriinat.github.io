@@ -71,13 +71,15 @@ a:active {
   color: #777959;
 }
 
-/* Haitari ja ctrl+f */
-.hidden-content {
-  height: 0;
-  overflow: hidden;
-  transition: height 0.3s ease;
+/* Näkyvyys Ctrl+F:lle myös suljetuissa osioissa */
+.accordion-collapse {
+  display: block !important;     /* Estää DOMista piilottamisen */
 }
 
-.hidden-content.open {
-  height: auto;
+.accordion-collapse:not(.show) {
+  height: 0 !important;
+  overflow: hidden !important;
+  visibility: hidden;            /* Ei näy visuaalisesti */
+  padding: 0 !important;
+  margin: 0 !important;
 }
