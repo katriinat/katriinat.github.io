@@ -70,3 +70,14 @@ a:hover {
 a:active {
   color: #777959;
 }
+
+/* Haitari ja ctrl+f */
+.hidden-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.hidden-content.open {
+  height: auto;
+}
